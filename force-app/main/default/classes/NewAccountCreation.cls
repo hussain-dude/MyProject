@@ -7,7 +7,6 @@ if (!Schema.sObjectType.Account.fields.name.isCreateable()) {
  }
 Account acc = new Account();
 acc.name = 'Test1';
-acc.Adress__c= 'My Address';
 Insert acc;
 }
 }
