@@ -4,7 +4,7 @@ public class ContactList {
         List<Contact> contactlist=[Select id,name,firstName,lastname,email from contact limit 10];
         return contactlist;
     }
-    //New Method
+    
     @AuraEnabled
     public static List<Account> getAccContactList(){
        List<Account> AccountList= [select id,name,(select id,name,Address__c,Postalcode__c from AccLocations__r) from Account where id='0012v00002RkjtZ'];
